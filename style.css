@@ -85,7 +85,7 @@ nav a:hover{text-decoration:underline;}
 section{padding:4rem 2rem;max-width:800px;margin:auto;}
 h2{
   font-family:var(--font-head);
-  font-size:1.25rem;
+  font-size:1.00rem;
   font-weight:700;
   margin-bottom:1rem;
 }
