@@ -17,7 +17,7 @@ body{
   background:var(--bg);
   color:var(--fg);
   font-family:var(--font-body);
-  font-size:18px;          /* résumé size */
+  font-size:14px;          /* résumé size */
   line-height:1.6;
 }
 img{max-width:100%;display:block;}
