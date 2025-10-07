@@ -111,3 +111,9 @@ h2{
 #contact{text-align:center;}
 .links{display:flex;justify-content:center;gap:2rem;margin-top:1rem;font-size:.9rem;}
 footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);}
+/* Behance iframe fix */
+.behance iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+}
