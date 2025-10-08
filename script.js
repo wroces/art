@@ -21,7 +21,7 @@ document.querySelectorAll('section').forEach(sec => {
   observer.observe(sec);
 });
 
-// ===== résumé panel (wait for DOM) =====
+// ===== resumé panel (wait for DOM) =====
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('resume-toggle');
   const panel  = document.getElementById('resume-panel');
