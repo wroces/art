@@ -20,3 +20,13 @@ document.querySelectorAll('section').forEach(sec => {
   sec.classList.add('hidden');   // start hidden
   observer.observe(sec);
 });
+// toggle panel
+const toggle = document.getElementById('resume-toggle');
+const panel  = document.getElementById('resume-panel');
+const close  = document.getElementById('close-panel');
+
+toggle.addEventListener('click', e => {
+  e.preventDefault();
+  panel.classList.add('active');
+});
+close.addEventListener('click', () => panel.classList.remove('active'));
