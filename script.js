@@ -28,28 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const close  = document.getElementById('close-panel');
 
   // open panel
-toggle.addEventListener('click', e => {
-  e.preventDefault();
-  panel.classList.add('active');
-});
-// close button
-close.addEventListener('click', () => panel.classList.remove('active'));
-// close when clicking OUTSIDE (backdrop)
-window.addEventListener('click', e => {
-  if (panel.classList.contains('active') &&
-      !panel.contains(e.target) &&
-      e.target !== toggle) {
-    panel.classList.remove('active');
-  }
-});
+  toggle.addEventListener('click', e => {
+    e.preventDefault();
+    panel.classList.add('active');
+  });
+  // close button
+  close.addEventListener('click', () => panel.classList.remove('active'));
+  // close when clicking OUTSIDE (backdrop)
+  window.addEventListener('click', e => {
+    if (panel.classList.contains('active') &&
+        !panel.contains(e.target) &&
+        e.target !== toggle) {
+      panel.classList.remove('active');
+    }
+  });
 
-                          /* =====  simple carousel  ===== */
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const track   = carousel.querySelector('.track');
-  const prevBtn = carousel.querySelector('.prev');
-  const nextBtn = carousel.querySelector('.next');
-  const scrollAmount = track.clientWidth;   // one full slide
+  /* =====  simple carousel  ===== */
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const track   = carousel.querySelector('.track');
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+    const scrollAmount = track.clientWidth;   // one full slide
 
-  prevBtn.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
-  nextBtn.addEventListener('click', () => track.scrollBy({ left:  scrollAmount, behavior: 'smooth' }));
-});
+    const goPrev = () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth
