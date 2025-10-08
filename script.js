@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     panel.classList.add('active');
   });
   close.addEventListener('click', () => panel.classList.remove('active'));
-});
-// close panel if user clicks outside
-panel.addEventListener('click', e => {
-  // only close if the click is on the backdrop (not on the inner content)
-  if (e.target === panel) panel.classList.remove('active');
+
+  // close panel if user clicks outside
+  panel.addEventListener('click', e => {
+    if (e.target === panel) panel.classList.remove('active');
+  });
 });
