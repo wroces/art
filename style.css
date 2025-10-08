@@ -96,3 +96,19 @@ h2{font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:
 #contact{text-align:center;}
 .links{display:flex;justify-content:center;gap:2rem;margin-top:1rem;font-size:.9rem;}
 footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);}
+/* side panel */
+.side-panel{
+  position:fixed;
+  top:0;right:-400px;          /* hidden off-screen */
+  width:400px;height:100%;
+  background:var(--bg);
+  border-left:1px solid var(--fg);
+  transition:right .35s ease;
+  z-index:200;
+}
+.side-panel.active{right:0;}   /* slide in */
+.panel-inner{padding:2rem;height:100%;display:flex;flex-direction:column;}
+#close-panel{align-self:flex-end;font-size:1.5rem;background:none;border:none;cursor:pointer;}
+#resume-panel h2{margin-bottom:1rem;}
+#resume-panel iframe{flex:1;border:1px solid var(--mute);}
+#resume-panel .download{margin-top:1rem;text-align:center;}
