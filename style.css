@@ -119,3 +119,12 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
   z-index:1;
 }
 .panel-inner{position:relative;z-index:2;}
+
+#gallery{padding:4rem 2rem;max-width:1000px;margin:auto;}
+.carousel{position:relative;display:flex;align-items:center;gap:.5rem;}
+.track{display:flex;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;}
+.track img{flex:0 0 100%;scroll-snap-align:start;width:100%;height:auto;max-height:70vh;object-fit:contain;}
+.nav{position:absolute;top:50%;transform:translateY(-50%);background:#fff;color:#000;border:none;font-size:2rem;padding:0 .4rem;cursor:pointer;z-index:10;}
+.prev{left:.5rem;}
+.next{right:.5rem;}
+@media(prefers-reduced-motion:reduce){.track{scroll-behavior:auto;}}
