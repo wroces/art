@@ -50,4 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = carousel.querySelector('.next');
     const scrollAmount = track.clientWidth;   // one full slide
 
-    const goPrev = () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth
+    const goPrev = () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    const goNext = () => track.scrollBy({ left:  scrollAmount, behavior: 'smooth' });
+
+    prevBtn.addEventListener('click', goPrev);
+    nextBtn.addEventListener('click', goNext);
+    prevBtn.addEventListener('touchstart', goPrev);
+    nextBtn.addEventListener('touchstart', goNext);
+  });
+});   /* ← closes DOMContentLoaded */
