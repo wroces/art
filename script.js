@@ -42,3 +42,14 @@ window.addEventListener('click', e => {
     panel.classList.remove('active');
   }
 });
+
+                          /* =====  simple carousel  ===== */
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track   = carousel.querySelector('.track');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  const scrollAmount = track.clientWidth;   // one full slide
+
+  prevBtn.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => track.scrollBy({ left:  scrollAmount, behavior: 'smooth' }));
+});
