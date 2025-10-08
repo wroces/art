@@ -27,14 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const panel  = document.getElementById('resume-panel');
   const close  = document.getElementById('close-panel');
 
-  toggle.addEventListener('click', e => {
-    e.preventDefault();
-    panel.classList.add('active');
-  });
-  close.addEventListener('click', () => panel.classList.remove('active'));
-
-  // close panel if user clicks outside
-  panel.addEventListener('click', e => {
-    if (e.target === panel) panel.classList.remove('active');
-  });
+  // open panel
+toggle.addEventListener('click', e => {
+  e.preventDefault();
+  panel.classList.add('active');
+});
+// close button
+close.addEventListener('click', () => panel.classList.remove('active'));
+// close when clicking OUTSIDE (backdrop)
+window.addEventListener('click', e => {
+  if (panel.classList.contains('active') &&
+      !panel.contains(e.target) &&
+      e.target !== toggle) {
+    panel.classList.remove('active');
+  }
 });
