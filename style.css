@@ -187,3 +187,24 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
   animation:fadeIn .3s ease;   /* always visible */
 }
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* =====  SAVE-AS SWAP  ===== */
+.save-as-gif{
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+}
+.save-as-gif img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  /* src is 1-pixel GIF – what gets saved */
+}
+.save-as-gif .photo-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  z-index:1;          /* what the eye sees */
+}
