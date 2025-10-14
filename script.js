@@ -59,3 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('touchstart', goNext);
   });
 });   /* ← closes DOMContentLoaded */
+/* ---- carousel buttons ---- */
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track   = carousel.querySelector('.track');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  const scrollAmount = track.clientWidth;
+
+  const goPrev = () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  const goNext = () => track.scrollBy({ left:  scrollAmount, behavior: 'smooth' });
+
+  prevBtn.addEventListener('click', goPrev);
+  nextBtn.addEventListener('click', goNext);
+  prevBtn.addEventListener('touchstart', goPrev);
+  nextBtn.addEventListener('touchstart', goNext);
+});
