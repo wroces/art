@@ -54,26 +54,50 @@
     </div>
   </section>
 
-  <section id="gallery">
-    <h2>Camera Works</h2>
-    <div class="carousel">
-      <button class="nav prev" aria-label="Previous">‹</button>
-      <div class="track">
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1MJ3yeWFrtEofSXRHFpywyhaudYsZVlzu=s1600" alt="Shot 1"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1c6TbjAJSp5X6zonYwRYSONrs10EAIPW7=s1600" alt="Shot 2"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1K05-143L_THDy3XWmfjGKV3IsE7PQRMe=s1600" alt="Shot 3"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1IkwpdPv4NhWIOTh4sj_kEHfDvVJvYdGh=s1600" alt="Shot 4"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1ith5gEWE4t2yAfNrfyKOsrcciKG8N7C4=s1600" alt="Shot 5"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1IGklMI2xyAuqPVG4yc8soJOrvKSlITP5=s1600" alt="Shot 6"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1dEkuduRGiLPmt2cXYUTtimRbYPBnkNm9=s1600" alt="Shot 7"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1IGklMI2xyAuqPVG4yc8soJOrvKSlITP5=s1600" alt="Shot 8"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1aS0k5kEWY_r2S3_yNA_SSUaGB89ZBD57=s1600" alt="Shot 9"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1K9H62MUGB2sRGqwDRly80BegzByjCag7=s1600" alt="Shot 10"><div class="shield"></div></div>
-        <div class="img-shield"><img src="https://lh3.googleusercontent.com/d/1uzJtkG81uts_6Ex4MF5FSZ0Nlq2K2cui=s1600" alt="Shot 11"><div class="shield"></div></div>
-      </div>
-      <button class="nav next" aria-label="Next">›</button>
-    </div>
-  </section>
+ /* =====  3-PHOTO FILM STRIP  ===== */
+#gallery{padding:4rem 2rem;max-width:1200px;margin:auto;}
+.film-strip{position:relative;display:flex;align-items:center;gap:1rem;}
+.strip-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scroll-snap-type:x mandatory;
+  gap:1rem;
+  width:100%;
+}
+.strip-track .img-shield{
+  flex:0 0 calc(33.333% - 0.67rem);   /* exactly 3 across */
+  scroll-snap-align:start;
+  height:auto;
+  max-height:60vh;
+}
+.strip-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  border:none;
+  font-size:2rem;
+  line-height:1;
+  padding:0 .6rem;
+  cursor:pointer;
+  z-index:10;
+  border-radius:4px;
+  opacity:.8;
+  transition:opacity .2s;
+}
+.strip-btn:hover{opacity:1;}
+.prev{left:1rem;}
+.next{right:1rem;}
+@media(max-width:768px){
+  .strip-track .img-shield{flex:0 0 calc(50% - .5rem);}   /* 2 across on tablets */
+  .strip-btn{font-size:1.5rem;padding:0 .4rem;}
+}
+@media(max-width:480px){
+  .strip-track .img-shield{flex:0 0 100%;}               /* 1 across on phones */
+}
+@media(prefers-reduced-motion:reduce){.strip-track{scroll-behavior:auto;}}
 
   <section id="about">
     <h2>About</h2>
