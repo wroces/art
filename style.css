@@ -164,3 +164,16 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
 .prev{left:.5rem;}
 .next{right:.5rem;}
 @media(prefers-reduced-motion:reduce){.track{scroll-behavior:auto;}}
+
+/* watermark only on real photos */
+.img-shield:not(.behance)::after{
+  content:"© WR";
+  position:absolute;
+  bottom:4px; right:6px;
+  font-size:.65rem;
+  color:#fff;
+  background:rgba(0,0,0,.45);
+  padding:2px 5px;
+  border-radius:2px;
+  z-index:3;
+}
