@@ -28,17 +28,16 @@
   <section id="work">
     <h2>My Works</h2>
     <div class="grid">
-      <!-- Project 1  – image -->
-     <div class="item behance">
-  <div class="video-wrap">
-    <iframe src="https://www.behance.net/embed/project/144454107?ilo0=1"
-            allowfullscreen loading="lazy" frameborder="0"
-            allow="clipboard-write"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-  </div>
-</div>
-
-      <!-- Project 2 – live Behance embed (auto-fit) -->
+      <!-- Project 1  – Behance embed -->
+      <div class="item behance">
+        <div class="video-wrap">
+          <iframe src="https://www.behance.net/embed/project/144454107?ilo0=1"
+                  allowfullscreen loading="lazy" frameborder="0"
+                  allow="clipboard-write"
+                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+      <!-- Project 2 – Behance embed -->
       <div class="item behance">
         <div class="video-wrap">
           <iframe src="https://www.behance.net/embed/project/113752511?ilo0=1"
@@ -47,12 +46,26 @@
                   referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
+      <!-- Projects 3-6 – shielded photos -->
+      <div class="item"><div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 3"><div class="shield"></div></div></div>
+      <div class="item"><div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 4"><div class="shield"></div></div></div>
+      <div class="item"><div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 5"><div class="shield"></div></div></div>
+      <div class="item"><div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 6"><div class="shield"></div></div></div>
+    </div>
+  </section>
 
-      <!-- Projects 3-6 – placeholders (swap later) -->
-      <div class="item"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 3"></div>
-      <div class="item"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 4"></div>
-      <div class="item"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 5"></div>
-      <div class="item"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Project 6"></div>
+  <section id="gallery">
+    <h2>Camero Works</h2>
+    <div class="carousel">
+      <button class="nav prev" aria-label="Previous">‹</button>
+      <div class="track">
+        <!-- each photo wrapped in shield -->
+        <div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Shot 1"><div class="shield"></div></div>
+        <div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Shot 2"><div class="shield"></div></div>
+        <div class="img-shield"><img src="https://drive.google.com/uc?export=view&id=1IexLNDNmAAirVILZihUIvWvIEH9OUd6e" alt="Shot 3"><div class="shield"></div></div>
+        <!-- add more shots the same way -->
+      </div>
+      <button class="nav next" aria-label="Next">›</button>
     </div>
   </section>
 
@@ -61,21 +74,7 @@
     <p>Creative designer with 8+ years in branding, motion graphics, and video editing. After leading teams and managing campaigns, I’m refocusing on hands-on design — creating work that feels honest, well-crafted, and true to its story. I value calm, clarity, and respect for the creative process.</p>
     <a href="https://drive.google.com/file/d/1auim5mQns2zYU1Nz2bofJYlPF-Jt45YL/view" target="_blank" class="btn">Resumé</a>
   </section>
-  
-<section id="gallery">
-  <h2>Camera Works</h2>
-  <div class="carousel">
-    <button class="nav prev" aria-label="Previous">‹</button>
-    <div class="track">
-      <img src="IMG_1.jpg" alt="Shot 1">
-      <img src="IMG_2.jpg" alt="Shot 2">
-      <img src="IMG_3.jpg" alt="Shot 3">
-      <!-- add more -->
-    </div>
-    <button class="nav next" aria-label="Next">›</button>
-  </div>
-</section>
-  
+
   <section id="contact">
     <h2>Contact</h2>
     <div class="links">
@@ -88,16 +87,16 @@
   <footer>© <span id="yr"></span> WR</footer>
   <script src="script.js"></script>
   <!-- Resumé slide panel -->
-<aside id="resume-panel" class="side-panel">
-  <div class="backdrop"></div>
-  <div class="panel-inner">
-    <button id="close-panel">&times;</button>
-    <h2>Resumé</h2>
-    <iframe src="https://drive.google.com/file/d/1auim5mQns2zYU1Nz2bofJYlPF-Jt45YL/preview"
-            width="100%" height="600" frameborder="0"></iframe>
-    <a href="https://drive.google.com/uc?export=download&id=1auim5mQns2zYU1Nz2bofJYlPF-Jt45YL"
-       class="btn download">Download PDF</a>
-  </div>
-</aside>
+  <aside id="resume-panel" class="side-panel">
+    <div class="backdrop"></div>
+    <div class="panel-inner">
+      <button id="close-panel">&times;</button>
+      <h2>Resumé</h2>
+      <iframe src="https://drive.google.com/file/d/1auim5mQns2zYU1Nz2bofJYlPF-Jt45YL/preview"
+              width="100%" height="600" frameborder="0"></iframe>
+      <a href="https://drive.google.com/uc?export=download&id=1auim5mQns2zYU1Nz2bofJYlPF-Jt45YL"
+         class="btn download">Download PDF</a>
+    </div>
+  </aside>
 </body>
 </html>
