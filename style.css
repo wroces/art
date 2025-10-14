@@ -177,3 +177,13 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
   border-radius:2px;
   z-index:3;
 }
+
+.img-shield .shield{
+  position:absolute;
+  inset:0;
+  background:url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7') 0 0 / 1px 1px;
+  z-index:2;
+  pointer-events:none;
+  animation:fadeIn .3s ease;   /* always visible */
+}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
