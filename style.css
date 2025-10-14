@@ -207,3 +207,22 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
   background-position:center;
   z-index:1;          /* what the eye sees */
 }
+/* =====  3-photo film strip  ===== */
+const track   = document.getElementById('strip-track');
+const prevBtn = document.querySelector('.strip-btn.prev');
+const nextBtn = document.querySelector('.strip-btn.next');
+const scrollStep = track.clientWidth / 3;   // 1/3 of strip width
+
+const goPrev = () => track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+const goNext = () => track.scrollBy({ left:  scrollStep, behavior: 'smooth' });
+
+prevBtn.addEventListener('click', goPrev);
+nextBtn.addEventListener('click', goNext);
+prevBtn.addEventListener('touchstart', goPrev);
+nextBtn.addEventListener('touchstart', goNext);
+
+// keyboard arrows
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') goPrev();
+  if (e.key === 'ArrowRight') goNext();
+});
