@@ -78,7 +78,6 @@ h2{font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:
   height:100%;
   object-fit:cover;
   max-width:1200px;          /* low-res barrier */
-  filter:grayscale(100%);
   transition:filter .3s;
 }
 .img-shield .shield{
