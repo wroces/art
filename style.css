@@ -58,11 +58,10 @@ nav a:hover{text-decoration:underline;}
 
 section{padding:4rem 2rem;max-width:800px;margin:auto;}
 h2{font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:1rem;}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:2rem;
-  margin-top:1.5rem;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 .item{border:1px solid var(--mute);}
 
@@ -271,3 +270,10 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
    flex:0 0 100%;               /* 1 across on phones */
  }
 @media(prefers-reduced-motion:reduce){.strip-track{scroll-behavior:auto;}}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
