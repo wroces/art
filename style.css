@@ -49,14 +49,14 @@ nav a:hover{text-decoration:underline;}
 .cta{
   margin-top:2.5rem;
   border:1px solid var(--fg);
-  padding:.6rem 1.4rem;
+  padding:.2rem 1.4rem;
   font-size:.9rem;
   letter-spacing:.5px;
   transition:background .2s, color .2s;
 }
 .cta:hover{background:var(--fg);color:var(--bg);}
 
-section{padding:0 2rem 4rem;max-width:800px;margin:auto;}
+section{padding: 2rem 2rem;max-width:800px;margin:auto;}
 h2{font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:1rem;}
 .grid {
   display: grid;
