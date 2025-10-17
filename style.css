@@ -56,7 +56,9 @@ nav a:hover{text-decoration:underline;}
 }
 .cta:hover{background:var(--fg);color:var(--bg);}
 
-section{padding: 2rem 2rem;max-width:800px;margin:auto;}
+section{padding:2rem 2rem;max-width:800px;margin:auto;}
+/* tighten only the space under the hero */
+#work { padding-top: 0.5rem; }   /* or 0 / 1rem—eyeball it */
 h2{font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:1rem;}
 .grid {
   display: grid;
