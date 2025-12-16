@@ -89,3 +89,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (e.key === 'ArrowRight') goNext();
   });
 });
+});
