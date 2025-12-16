@@ -30,6 +30,7 @@ nav a{margin-left:1.5rem;font-size:.9rem;font-weight:400;}
 nav a:hover{text-decoration:underline;}
 
 .hero{
+  position: relative;
   height:100vh;
   display:flex;
   flex-direction:column;
@@ -327,4 +328,18 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
 .download-btn:hover {
   background: var(--fg);
   color: var(--bg);
+}
+
+/* faint "SCROLL DOWN" line under hero title */
+.hero::after {
+  content: "SCROLL DOWN";
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--fg);
+  opacity: 0.35;
+  pointer-events: none;
 }
