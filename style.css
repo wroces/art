@@ -271,6 +271,7 @@ footer{text-align:center;padding:2.5rem 1rem;font-size:.75rem;color:var(--mute);
  .strip-track .img-shield{
    flex:0 0 100%;               /* 1 across on phones */
  }
+}
 @media(prefers-reduced-motion:reduce){.strip-track{scroll-behavior:auto;}}
 
 /* ===== RESUME MODAL (pop-up) ===== */
