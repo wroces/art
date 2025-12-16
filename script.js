@@ -4,13 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
 
-  // smooth-scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// smooth-scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const id = this.getAttribute('href');
+    if (id === '#' || id === '') return;          // ignore empty hashes
+    const tgt = document.querySelector(id);
+    if (tgt) {
       e.preventDefault();
-      const tgt = document.querySelector(this.getAttribute('href'));
-      if (tgt) tgt.scrollIntoView({ behavior: 'smooth' });
-    });
+      tgt.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 
   /* ---------- fade-in on scroll ---------- */
